@@ -1,0 +1,1 @@
+Tasks from Core-Java-1 course at HackBulgaria
