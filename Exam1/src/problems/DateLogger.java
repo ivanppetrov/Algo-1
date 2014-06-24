@@ -1,22 +1,14 @@
 package problems;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class DateLogger extends Logger{
-	
-	@Override
-	public void log(String message) {
-		if (getLevel() >= DEFAULTLEVEL) {
-			System.out.print("[" + new Date() + "] ");
-			System.out.printf("%d => %s\n", getLevel(), message);
-		}
-	}
+	private SimpleDateFormat date = new SimpleDateFormat("hh:mm:ss dd.M.yyyy");
 	
 	@Override
 	public void log(int level, String message) {
-		if (level <= getLevel()) {
-			System.out.print("[" + new Date() + "] ");
-			System.out.printf("%d => %s\n", level, message);
-		}
-	}
+		System.out.print("[" + date.format(new Date()) + "] ");
+		super.log(level, message);
+	}	
 }

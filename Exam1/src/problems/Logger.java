@@ -2,10 +2,10 @@ package problems;
 
 public class Logger {
 	private int level;
-	protected static final int DEFAULTLEVEL = 3;
+	protected static final int DEFAUL_TLEVEL = 3;
 	
 	public Logger() {
-		this.level = DEFAULTLEVEL;
+		this.level = DEFAUL_TLEVEL;
 	}
 	
 	public Logger(int level) {
@@ -16,7 +16,7 @@ public class Logger {
 		if (level > 0) {
 			this.level = level;
 		} else {
-			System.out.println("The level should be > 0.");
+			throw new InvalidLogLevelException(level);
 		}
 	}
 	
@@ -25,14 +25,21 @@ public class Logger {
 	}
 	
 	public void log(String message) {
-		if (getLevel() >= DEFAULTLEVEL) {
-			System.out.printf("%d => %s\n", getLevel(), message);
-		}
+		log(DEFAUL_TLEVEL, message);
 	}
 	
 	public void log(int level, String message) {
 		if (level <= getLevel()) {
 			System.out.printf("%d => %s\n", level, message);
 		}
+	}
+	
+	private static class InvalidLogLevelException extends RuntimeException {
+		private static final long serialVersionUID = 1l;
+		
+		public InvalidLogLevelException(int level) {
+			super("Level should be > 0. Given level: " + level);
+		}
+		
 	}
 }
