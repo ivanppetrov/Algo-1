@@ -1,0 +1,1 @@
+"C:\Program Files\Java\jre7\bin\javaw.exe" -jar "C:\Users\ivan__000\Documents\workspace\WorkingWithLibraries\Highlighter.jar" %1 %
