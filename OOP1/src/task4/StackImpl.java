@@ -9,6 +9,10 @@ public class StackImpl implements Stack {
 		this.elements = new Object[size];
 	}
 	
+	public Object[] getElements() {
+		return elements;
+	}
+
 	@Override
 	public void push(Object element) {
 		int currentSize = size();
@@ -23,7 +27,7 @@ public class StackImpl implements Stack {
 	@Override
 	public Object pop() {
 		if (!isEmpty()) {
-			Object last = getElement();
+			Object last = get();
 			elements[size() - 1] = null;
 			
 			return last;
@@ -33,7 +37,7 @@ public class StackImpl implements Stack {
 	}
 
 	@Override
-	public Object getElement() {
+	public Object get() {
 		if (isEmpty()) {
 			return "The stack is empty";
 		} else {

@@ -13,7 +13,7 @@ public class StackTest {
 		stack.push(4);
 		stack.push(1);
 		stack.push(2);
-		System.out.println("Get element: " + stack.getElement());
+		System.out.println("Get element: " + stack.get());
 		stack.printElements(stack);
 		System.out.println("Pop element: " + stack.pop());
 		System.out.println("Pop element: " + stack.pop());
@@ -22,7 +22,7 @@ public class StackTest {
 		stack.clean();
 		stack.printElements(stack);
 		System.out.println("Is stack empty? " + stack.isEmpty());
-		System.out.println("Get element: " + stack.getElement());
+		System.out.println("Get element: " + stack.get());
 		System.out.println("Pop element: " + stack.pop());
 	}
 

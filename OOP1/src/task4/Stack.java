@@ -7,7 +7,7 @@ public interface Stack {
 	public Object pop();
 	
 	//return element and do not delete it
-	public Object getElement();
+	public Object get();
 	
 	public int size();
 	
