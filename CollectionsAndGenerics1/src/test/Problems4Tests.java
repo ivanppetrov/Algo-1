@@ -3,7 +3,9 @@ package test;
 import static org.junit.Assert.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
+import java.util.List;
 
 import implementation.BoundedQueue;
 import implementation.Problems4;
@@ -34,5 +36,15 @@ public class Problems4Tests {
 		assertFalse(boundedQueue.offer(4));
 		assertFalse(boundedQueue.offer(5));
 		System.out.println(boundedQueue.toString());
+		
+		Collection list = new ArrayList();
+		list.add(1);
+		list.add(2);
+		list.add(3);
+		list.add(4);
+		list.add(5);
+		
+		System.out.println(Problems4.rotate(list, 2));
+		System.out.println(Problems4.rotate(list, -2));
 	}
 }

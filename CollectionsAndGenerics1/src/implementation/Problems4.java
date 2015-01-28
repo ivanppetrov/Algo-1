@@ -1,7 +1,13 @@
 package implementation;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 import java.util.Stack;
+
+import test.Problems4Tests;
 
 public class Problems4 {
 	
@@ -78,9 +84,46 @@ public class Problems4 {
 	//End task2
 	
 	//Start task4
-	public static <T> void rotate(Collection<T> collection, int rotateStep) {
-		if (rotateStep < 0) {
-			
+	@SuppressWarnings("unchecked")
+	public static <T> Collection<T> rotate(Collection<T> collection, int rotateStep) {
+		
+		if (rotateStep > 0) {
+			for (int i = 0; i < rotateStep; i++) {
+				collection = setLastFirst(collection);
+			}
+		} else {
+			for (int i = rotateStep; i < 0; i++) {
+				collection = setFirstLast(collection);
+			}
 		}
+		
+		return collection;
 	}
+	
+	@SuppressWarnings({ "rawtypes", "unchecked" })
+	private static <T> Collection setLastFirst(Collection<T> list) {
+		int size = list.size();
+		Collection rotatedList = new ArrayList<T>();
+		T[] array = (T[]) list.toArray();
+		rotatedList.add(array[size - 1]);
+		for (int i = 0; i < size - 1 ; i++) {
+			rotatedList.add(array[i]);
+		}
+		
+		return rotatedList;
+	}
+	
+	private static <T> Collection setFirstLast(Collection<T> list) {
+		int size = list.size();
+		Collection rotatedList = new ArrayList<T>();
+		T[] array = (T[]) list.toArray();
+		for (int i = 1; i < size; i++) {
+			rotatedList.add(array[i]);
+		}
+		rotatedList.add(array[0]);
+		
+		return rotatedList;
+	}
+	
+	//End task4	
 }
