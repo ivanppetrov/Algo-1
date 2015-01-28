@@ -46,5 +46,7 @@ public class Problems4Tests {
 		
 		System.out.println(Problems4.rotate(list, 2));
 		System.out.println(Problems4.rotate(list, -2));
+		
+		System.out.println(Problems4.findUnique(Arrays.asList(1,1,2,3,3,2,11, 11, 12,3123,12312,3,123,123 ,12312312 ,112)));
 	}
 }

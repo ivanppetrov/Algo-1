@@ -1,10 +1,15 @@
 package implementation;
 
+import java.security.acl.LastOwnerException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 import java.util.Stack;
 
 import test.Problems4Tests;
@@ -124,6 +129,21 @@ public class Problems4 {
 		
 		return rotatedList;
 	}
+	//End task4
 	
-	//End task4	
+	//Start task5
+	public static int findUnique(Collection<Integer> collection) {
+		Collections.sort((List<Integer>)collection);
+		List<Integer> list = new ArrayList<Integer>(collection);
+		int serchedElement = collection.iterator().next();
+		List<Integer> subList = list.subList(1, list.size());
+		
+		if (subList.contains(serchedElement)) {
+			return findUnique(subList.subList(subList.lastIndexOf(serchedElement) + 1, subList.size()));
+		} else {
+			return serchedElement;
+		}
+	}
+	//End task5
+
 }
