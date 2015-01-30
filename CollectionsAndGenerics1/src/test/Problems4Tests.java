@@ -5,7 +5,8 @@ import static org.junit.Assert.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 import implementation.BoundedQueue;
 import implementation.Problems4;
@@ -37,7 +38,8 @@ public class Problems4Tests {
 		assertFalse(boundedQueue.offer(5));
 		System.out.println(boundedQueue.toString());
 		
-		Collection list = new ArrayList();
+		//Test task4
+		Collection<Integer> list = new ArrayList<Integer>();
 		list.add(1);
 		list.add(2);
 		list.add(3);
@@ -47,6 +49,14 @@ public class Problems4Tests {
 		System.out.println(Problems4.rotate(list, 2));
 		System.out.println(Problems4.rotate(list, -2));
 		
-		System.out.println(Problems4.findUnique(Arrays.asList(1,1,2,3,3,2,11, 11, 12,3123,12312,3,123,123 ,12312312 ,112)));
+		//test task5
+		System.out.println(Problems4.findUnique(Arrays.asList(1,1,2,3,3,2,11,11,2,12,3123,12312,3,123,123,12312312,112)));
+		
+		//Test task6
+		Set<Integer> a = new HashSet<Integer>(Arrays.asList(1,2,3,4,5,6));
+		Set<Integer> b = new HashSet<Integer>(Arrays.asList(4,5,6));
+		Set<Integer> c = new HashSet<Integer>(Arrays.asList(5,6,7,8));
+
+		System.out.println(Problems4.findIntersSection(a, b, c));
 	}
 }

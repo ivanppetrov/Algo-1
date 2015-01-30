@@ -1,18 +1,13 @@
 package implementation;
 
-import java.security.acl.LastOwnerException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 import java.util.Stack;
-
-import test.Problems4Tests;
 
 public class Problems4 {
 	
@@ -118,9 +113,10 @@ public class Problems4 {
 		return rotatedList;
 	}
 	
-	private static <T> Collection setFirstLast(Collection<T> list) {
+	@SuppressWarnings("unchecked")
+	private static <T> Collection<T> setFirstLast(Collection<T> list) {
 		int size = list.size();
-		Collection rotatedList = new ArrayList<T>();
+		Collection<T> rotatedList = new ArrayList<T>();
 		T[] array = (T[]) list.toArray();
 		for (int i = 1; i < size; i++) {
 			rotatedList.add(array[i]);
@@ -145,5 +141,29 @@ public class Problems4 {
 		}
 	}
 	//End task5
-
+	
+	//Start task6
+	public static <T> Set<T> findIntersSection(Set<T>... sets) {
+		Set<T> result = sets[0];
+		
+		for (int i = 1; i < sets.length; i++) {
+			result = intersection(result, sets[i]);
+		}
+		
+		
+		return result;
+	}
+	
+	private static <T> Set<T> intersection(Set<T> first, Set<T> second) {
+		Set<T> result = new HashSet<T>();
+		
+		for (T t : first) {
+			if (second.contains(t)) {
+				result.add(t);
+			}
+		}
+		
+		return result;
+	}
+	//End task6
 }
