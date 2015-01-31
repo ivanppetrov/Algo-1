@@ -3,8 +3,8 @@ package implementation;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 import java.util.Stack;
@@ -166,4 +166,24 @@ public class Problems4 {
 		return result;
 	}
 	//End task6
+	
+	//Start task7
+	public void sort(List<Student> students) {
+		Collections.sort(students, new Comparator<Student>() {
+
+			@Override
+			public int compare(Student s1, Student s2) {
+				Integer grade1 = s1.getGrade();
+				Integer grade2 = s2.getGrade();
+				int compareByGrade = grade1.compareTo(grade2);
+				
+				if (compareByGrade != 0) {
+					return -compareByGrade;
+				} else {
+					return -s1.getName().compareTo(s2.getName());
+				}
+			}
+		});
+	}
+	//End task7
 }
