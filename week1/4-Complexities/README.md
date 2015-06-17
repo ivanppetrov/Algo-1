@@ -67,7 +67,11 @@ Complexity: ...
 
 ```
 for (i = 0; i < n; i++) {
+<<<<<<< HEAD
   for (j = 1; j < n; j*=2) {
+=======
+  for (j = 0; j < n; j*=2) {
+>>>>>>> 3cb0a393c96839cc4ca388416c0a957884ae7d95
     count++
   }
 }
