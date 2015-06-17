@@ -1,0 +1,33 @@
+package task2.solution;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class QueueList<T> implements Queue<T>{
+	List<T> data;
+	
+	public QueueList() {
+		this.data = new ArrayList<T>();
+	}
+	
+	@Override
+	public void push(T value) {
+		this.data.add(value);
+	}
+
+	@Override
+	public T pop() {
+		return this.data.remove(0);
+	}
+
+	@Override
+	public T peek() {
+		return this.data.get(0);
+	}
+
+	@Override
+	public int size() {
+		return this.data.size();
+	}
+
+}

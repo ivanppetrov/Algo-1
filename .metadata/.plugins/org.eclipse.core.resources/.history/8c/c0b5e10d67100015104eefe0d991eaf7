@@ -1,0 +1,45 @@
+package task4.solution;
+
+public class MergeSort {
+	public static int[] sort(int[] array) {
+		int[] result = new int[array.length];
+		
+		array = splitArray(array, 0, array.length - 1, result);
+		
+		return array;
+	}
+	
+	private static int[] splitArray(int[] array, int begin, int end, int[] result) {
+		if (end == begin) {
+			result[0] = array[begin];
+			return result;
+		} else {
+//			splitArray(array, begin, end / 2);
+//			splitArray(array, end / 2 + 1, end);
+			mergeArrays(splitArray(array, begin, (begin + end) / 2, result), splitArray(array, (begin + end) / 2 + 1, end, result), result);
+			return result;
+		}
+	}
+	
+	private static int[] mergeArrays(int[] arrayLeft, int[] arrayRight, int[] result) {
+		int indexLeft = 0, indexRight = 0;
+		for (int i = 0; i < result.length; i++) {
+			if (indexLeft < arrayLeft.length) {
+				if (indexRight < arrayRight.length && arrayLeft[indexLeft] > arrayRight[indexRight]) {
+					result[i] = arrayRight[indexRight];
+					indexRight++;
+				} else {
+					result[i] = arrayLeft[indexLeft];
+					indexLeft++;
+				}
+			} else {
+				if (indexRight < arrayRight.length) {
+					result[i] = arrayRight[indexRight];
+					indexRight++;
+				}
+			}
+		}
+		
+		return result;
+	}
+}

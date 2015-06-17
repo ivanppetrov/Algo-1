@@ -1,0 +1,9 @@
+package task2.solutions;
+
+import java.util.Vector;
+
+public class BirthadyRanges {
+	public static Vector<Integer> countBirthdays(Vector<Integer> birhtdays, ) {
+		
+	}
+}

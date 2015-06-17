@@ -1,0 +1,24 @@
+package task4.solution;
+
+public class MergeSort {
+	private static int[] helper;
+	
+	public static void sort(int[] array) {
+		int lenght = array.length - 1;
+		helper = new int[lenght];
+		split(0, lenght);
+	}
+	
+	private static void split(int low, int high) {
+		if (low < high) {
+			int middle = (low + high) / 2;
+			split(low, middle);
+			split(middle, high);
+			merge(low, middle, high);
+		}
+	}
+	
+	private static void merge(int low, int middle, int high) {
+		
+	}
+}

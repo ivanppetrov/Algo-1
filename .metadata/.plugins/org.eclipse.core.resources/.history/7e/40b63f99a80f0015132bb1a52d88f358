@@ -1,0 +1,37 @@
+package task3.solution;
+
+import task2.solution.QueueImpl;
+
+public class StackImpl<T> implements Stack<T>{
+	QueueImpl<T> queue;
+	
+	public StackImpl() {
+		queue = new QueueImpl<T>();
+	}
+	
+	@Override
+	public boolean push(T value) {
+		return queue.push(value);
+	}
+
+	@Override
+	public T pop() {
+		return queue.pop();
+	}
+
+	@Override
+	public T peek() {
+		return queue.peek();
+	}
+
+	@Override
+	public int size() {
+		return queue.size();
+	}
+	
+	@Override
+	public String toString() {
+		return queue.toString();
+	}
+
+}

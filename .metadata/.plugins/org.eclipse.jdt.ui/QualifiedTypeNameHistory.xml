@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="task1.Vector"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+<fullyQualifiedTypeName name="java.lang.IndexOutOfBoundsException"/>
+<fullyQualifiedTypeName name="task1.VectorImpl"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="java.lang.StringBuffer"/>
+<fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="task1.solution.VectorImpl"/>
+<fullyQualifiedTypeName name="task2.solution.Queue"/>
+<fullyQualifiedTypeName name="task1.solution.Vector"/>
+<fullyQualifiedTypeName name="task2.solution.QueueImpl"/>
+<fullyQualifiedTypeName name="task3.solution.StackImpl"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="task4.solution.SelectionSort"/>
+<fullyQualifiedTypeName name="task4.solution.InsertionSort"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="task4.solution.MergeSort"/>
+<fullyQualifiedTypeName name="task3.solution.Stack"/>
+<fullyQualifiedTypeName name="java.util.Stack"/>
+<fullyQualifiedTypeName name="task2.tests.QueueStackTests"/>
+<fullyQualifiedTypeName name="task4.solution.Merge"/>
+<fullyQualifiedTypeName name="task4.solution.CountingSort"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="task1.tests.TestGenerator"/>
+<fullyQualifiedTypeName name="java.util.Random"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="task1.solutions.BinarySearch"/>
+<fullyQualifiedTypeName name="task1.solutions.Roots"/>
+<fullyQualifiedTypeName name="java.util.Vector"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,16 @@
+package task2.solutions;
+
+import java.util.List;
+
+public class BirthadyRanges {
+	public static List<Integer> countBirthdays(List<Integer> birthdays, List<Pair> ranges) {
+		List<Integer> result = null;
+		int[] histogram = new int[366];
+		
+		for (int i = 0; i < birthdays.size(); i++) {
+			histogram[birthdays.get(i)]++;
+		}
+		
+		return result;
+	}
+}

@@ -1,0 +1,18 @@
+package task1.solutions;
+
+public class BinarySearch {
+	public static int binarySearch(int[] array, int element, int left, int right) {
+		if (array[left] == element) {
+			return left;
+		} else {
+			int mid = left + right/2;
+			if (element < array[mid]) {
+				binarySearch(array, element, mid, right);
+			} else {
+				binarySearch(array, element, left, mid + 1);
+			}
+		}
+		
+		return -1;
+	}
+}

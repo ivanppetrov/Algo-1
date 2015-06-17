@@ -1,0 +1,10 @@
+package task4.tests;
+
+public class SortingTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,13 @@
+package task2.solutions;
+
+import java.util.List;
+
+public class BirthadyRanges {
+	public static List<Integer> countBirthdays(List<Integer> birhtdays, List<Pair> ranges) {
+		List<Integer> result = null;
+		
+		
+		
+		return result;
+	}
+}
