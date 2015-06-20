@@ -1,23 +1,39 @@
 package task2.solutions;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
+import task0.solutions.BinarySearch;
+
 public class BirthadyRanges {
+
 	public static List<Integer> countBirthdays(List<Integer> birthdays, List<Pair> ranges) {
 		List<Integer> result = new ArrayList<Integer>();
-		int[] histogram = new int[366];
+
+		int[] bdayHistogram = new int[366];
 		
-		for (int i = 0; i < birthdays.size(); i++) {
-			histogram[birthdays.get(i)]++;
+		for (Integer bday : birthdays) {
+			bdayHistogram[bday]++;
 		}
 		
+		for (int i = 1; i < bdayHistogram.length; i++) {
+			bdayHistogram[i] += bdayHistogram[i - 1];
+		}
+		
+		
 		for (Pair pair : ranges) {
-			int count = 0;
-			for (int i = pair.getStart(); i <= pair.getEnd(); i++) {
-				count += histogram[i];
+			int start = 0, end = 0;
+			
+			if (pair.getStart() == 0) {
+				start = bdayHistogram[pair.getStart()];
+			} else {
+				start = bdayHistogram[pair.getStart() - 1];
 			}
-			result.add(count);
+			
+			end = bdayHistogram[pair.getEnd()];
+			
+			result.add(end - start);
 		}
 		
 		return result;
