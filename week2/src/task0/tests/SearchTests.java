@@ -7,6 +7,7 @@ import java.util.Random;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import task0.solutions.BinaryHeap;
 import task0.solutions.BinarySearch;
 
 public class SearchTests {
@@ -26,6 +27,24 @@ public class SearchTests {
 			
 			assertEquals(TestGenerator.isContain(array, searchedElement), BinarySearch.binarySearch(array, searchedElement, 0, array.length - 1));
 		}
+		
+		BinaryHeap heap = new BinaryHeap();
+		
+		heap.insert(10);
+		heap.insert(7);
+		heap.insert(8);
+		heap.insert(5);
+		heap.insert(4);
+		heap.insert(1);
+		heap.insert(2);
+		heap.insert(1);
+		
+		
+		System.out.println(heap.toString());
+		
+		heap.removeMax();
+		
+		System.out.println(heap.toString());
 	}
 
 }
