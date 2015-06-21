@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # Algorithms
 Solution of the tasks for Algo course at HackBulgaria
 https://github.com/HackBulgaria/Algo-1
@@ -67,5 +67,3 @@ This program is a draft version and can change until the course starts.
   * Knuth-Morris-Pratt
 * Randomized algorithms - Monte Carlo and Las Vegas (3 lecture)
 * Dynamic programming (3 lecture)
-
->>>>>>> 3cb0a393c96839cc4ca388416c0a957884ae7d95
