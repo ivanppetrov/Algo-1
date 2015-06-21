@@ -1,6 +1,5 @@
 # Roots
 
-<<<<<<< HEAD
 Write a function that computes the square root of a number with binary search.
 Precision of the result should be `0.00001`.
 
@@ -23,5 +22,4 @@ Input:
 Output:
 ```
 2.23606
->>>>>>> 9199395fd47921ce3e77e9728b69441958d866ac
 ```

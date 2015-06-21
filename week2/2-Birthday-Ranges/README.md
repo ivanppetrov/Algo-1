@@ -1,6 +1,5 @@
 # Birthday ranges
 
-<<<<<<< HEAD
 Given a vector of people's birthdays (numbers in the range 0-365) and a vector
 of ranges (pairs of numbers in the range 0-365) produce a vector of the number
 of people with birthday in the specific range.
@@ -27,5 +26,4 @@ Input:
 Output:
 ```
 [5, 2, 0, 1]
->>>>>>> 9199395fd47921ce3e77e9728b69441958d866ac
 ```
