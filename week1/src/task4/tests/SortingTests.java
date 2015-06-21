@@ -10,6 +10,7 @@ import org.junit.Test;
 import task4.solution.CountingSort;
 import task4.solution.InsertionSort;
 import task4.solution.MergeSort;
+import task4.solution.QuickSort;
 import task4.solution.SelectionSort;
 
 public class SortingTests {
@@ -59,6 +60,12 @@ public class SortingTests {
 		MergeSort.sort(mergeArray);
 		System.out.printf("\nMerge sort: %d", System.currentTimeMillis() - startMerge);
 		assertTrue(isSorted(mergeArray));
+		
+		//Merge sort test
+		long startQuick = System.currentTimeMillis();
+		QuickSort.sort(quickArray);
+		System.out.printf("\nQuick sort: %d", System.currentTimeMillis() - startQuick);
+		assertTrue(isSorted(quickArray));
 		
 		//Counting sort test
 		long startCount = System.currentTimeMillis();
