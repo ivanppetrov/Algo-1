@@ -30,14 +30,14 @@ public class SearchTests {
 		
 		BinaryHeap heap = new BinaryHeap();
 		
-		heap.insert(10);
-		heap.insert(7);
-		heap.insert(8);
-		heap.insert(5);
-		heap.insert(4);
-		heap.insert(1);
-		heap.insert(2);
-		heap.insert(1);
+		heap.insertMax(10);
+		heap.insertMax(7);
+		heap.insertMax(8);
+		heap.insertMax(5);
+		heap.insertMax(4);
+		heap.insertMax(1);
+		heap.insertMax(2);
+		heap.insertMax(1);
 		
 		
 		System.out.println(heap.toString());

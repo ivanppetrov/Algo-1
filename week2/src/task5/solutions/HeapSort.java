@@ -7,11 +7,11 @@ public class HeapSort {
 		BinaryHeap heap = new BinaryHeap();
 		
 		for (int i = 0; i < array.length; i++) {
-			heap.insert(array[i]);
+			heap.insertMax(array[i]);
 		}
 		
 		for (int i = array.length - 1; i >= 0; i--) {
-			array[i] = heap.getMax();
+			array[i] = heap.getTop();
 			heap.removeMax();
 		}
 	}
