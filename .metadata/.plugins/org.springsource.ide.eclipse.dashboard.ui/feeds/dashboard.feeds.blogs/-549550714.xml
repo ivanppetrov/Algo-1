@@ -5,7 +5,32 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2015-06-17T16:07:33Z</updated>
+  <updated>2015-06-19T19:39:17Z</updated>
+  <entry>
+    <title>Spring Integration Kafka 1.2 is available, with 0.8.2 support and performance enhancements</title>
+    <link rel="alternate" href="https://spring.io/blog/2015/06/19/spring-integration-kafka-1-2-is-available-with-0-8-2-support-and-performance-enhancements" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Marius Bogoevici</name>
+    </author>
+    <id>tag:spring.io,2015-06-19:2169</id>
+    <updated>2015-06-19T19:39:17Z</updated>
+    <content type="html">&lt;p&gt;We are pleased to announce the release of Spring Integration Kafka 1.2.&lt;/p&gt;&lt;p&gt;This new release provides a couple of major improvements and upgrades over the previous versions:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Support for Apache Kafka 0.8.2 and using the new Producer API;&lt;/li&gt;
+  &lt;li&gt;Overhaul of the internal concurrent dispatching with a non-blocking ring buffer implementation based on &lt;a href="https://github.com/reactor/reactor"&gt;Project Reactor&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;For each of the changes, the goal was to improve the performance of the producer and, respectively, consumer components of Spring Integration Kafka. While we do not have any isolated benchmarks for Spring Integration Kafka proper, the enhancements of the release have contributed to the &lt;a href="https://spring.io/blog/2015/06/17/spring-xd-benchmarks-part-1"&gt;performance metrics&lt;/a&gt; reported in the newly released &lt;a href="https://spring.io/blog/2015/06/17/spring-xd-1-2-ga-spring-xd-1-1-3-and-flo-for-spring-xd-beta-released"&gt;Spring XD 1.2&lt;/a&gt;. &lt;/p&gt;&lt;p&gt;By upgrading to Kafka 0.8.2, some of the options available in the old producer API (for example, sending messages synchronously) aren&amp;rsquo;t supported anymore, and some configuration options are semantically different (batch size, which previously referred to the message count, is now referring to the byte count). In the interest of clarity and reducing surprises, we&amp;rsquo;ve preferred to break backwards compatibility in the XML configuration, by removing unavailable options and renaming existing ones to make sure that they are fully understood. Consult the &lt;a href="https://github.com/spring-projects/spring-integration-kafka"&gt;project&lt;/a&gt; for details.&lt;/p&gt;&lt;p&gt;Happy coding!&lt;/p&gt;&lt;p&gt;Some of the upcoming features will include:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Improving the documentation by creating a dedicated wiki;&lt;/li&gt;
+  &lt;li&gt;Making it easy to send messages outside of a Spring Integration Kafka outbound channel adapter by providing template support;&lt;/li&gt;
+  &lt;li&gt;Exploring the options for Reactive Streams integration.&lt;/li&gt;
+&lt;/ul&gt;&lt;h1&gt;&lt;a href="#springone-2gx-2015-is-around-the-corner" class="anchor" name="springone-2gx-2015-is-around-the-corner"&gt;&lt;/a&gt;SpringOne 2GX 2015 is around the corner!&lt;/h1&gt;&lt;p&gt;Book your place at &lt;a href="http://www.springone2gx.com"&gt;SpringOne2GX in Washington, DC soon&lt;/a&gt;. Early Bird Price expires August 14th! It&amp;rsquo;s simply the best opportunity to find out first hand all that&amp;rsquo;s going on and to provide direct feedback.&lt;/p&gt;&lt;h1&gt;&lt;a href="#discounts" class="anchor" name="discounts"&gt;&lt;/a&gt;Discounts&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;The Early Bird price tier (June 13th - August 14th) is discounted $150.&lt;/li&gt;
+  &lt;li&gt;Register 4 and get the 5th pass free. Contact us with the names of your first 4 registrants for your complimentary pass code (conference admission only).&lt;/li&gt;
+  &lt;li&gt;Alumni, contact us for your discount code ($150 off any option).&lt;/li&gt;
+&lt;/ul&gt;</content>
+  </entry>
   <entry>
     <title>Spring Guides Move to Java 8</title>
     <link rel="alternate" href="https://spring.io/blog/2015/06/17/spring-guides-move-to-java-8" />
@@ -14,7 +39,7 @@
       <name>Greg Turnquist</name>
     </author>
     <id>tag:spring.io,2015-06-12:2161</id>
-    <updated>2015-06-17T16:07:33Z</updated>
+    <updated>2015-06-17T16:07:00Z</updated>
     <content type="html">&lt;p&gt;Perhaps you&amp;rsquo;ve noticed some recent articles lately? &lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href="https://spring.io/blog/2015/06/10/feedback-welcome-spring-5-system-requirements"&gt;Spring 5 moving up to Java 8+&lt;/a&gt;&lt;/li&gt;
@@ -25,7 +50,7 @@
 &lt;ul&gt;
   &lt;li&gt;Latest and greatest stable version of Java SE. (Features, performance, and more.)&lt;/li&gt;
   &lt;li&gt;Content of the guides are easy to port backwards if needed. Even lambdas map nicely back to single method interfaces.&lt;/li&gt;
-  &lt;li&gt;Picking up a cloning a guide as your beginner project will get you started with a solid, modern setup.&lt;/li&gt;
+  &lt;li&gt;Picking up a guide as your beginner project will get you started with a solid, modern setup.&lt;/li&gt;
 &lt;/ul&gt;&lt;p&gt;In this day and age, with the end of public updates to Java 7, it seems highly unlikely that a developer can&amp;rsquo;t easily his or her hands on a Java 8 SDK and give our code a spin.&lt;/p&gt;&lt;h1&gt;&lt;a href="#springone-2gx-2015-is-around-the-corner" class="anchor" name="springone-2gx-2015-is-around-the-corner"&gt;&lt;/a&gt;SpringOne 2GX 2015 is around the corner!&lt;/h1&gt;&lt;p&gt;Book your place at &lt;a href="http://www.springone2gx.com"&gt;SpringOne2GX in Washington, DC soon&lt;/a&gt;. Early Bird Price expires August 14th! It&amp;rsquo;s simply the best opportunity to find out first hand all that&amp;rsquo;s going on and to provide direct feedback.&lt;/p&gt;&lt;h1&gt;&lt;a href="#discounts" class="anchor" name="discounts"&gt;&lt;/a&gt;Discounts&lt;/h1&gt;
 &lt;ul&gt;
   &lt;li&gt;The Early Bird price tier (June 13th - August 14th) is discounted $150.&lt;/li&gt;
@@ -487,7 +512,7 @@ EvernoteOAuthToken accessToken = (EvernoteOAuthToken)oAuth1Operations.exchangeFo
       <name>S?bastien Deleuze</name>
     </author>
     <id>tag:spring.io,2015-05-27:2140</id>
-    <updated>2015-06-08T11:45:24Z</updated>
+    <updated>2015-06-08T11:45:00Z</updated>
     <content type="html">&lt;p&gt;For security reasons, browsers prohibit AJAX calls to resources residing outside the current origin. For example, as you&amp;rsquo;re checking your bank account in one tab, you could have the evil.com website in another tab. The scripts from evil.com shouldn’t be able to make AJAX requests to your bank API (withdrawing money from your account!) using your credentials.&lt;/p&gt;&lt;p&gt;&lt;a href="http://en.wikipedia.org/wiki/Cross-origin_resource_sharing"&gt;Cross-origin resource sharing&lt;/a&gt; (CORS) is a &lt;a href="http://www.w3.org/TR/cors/"&gt;W3C specification&lt;/a&gt; implemented by &lt;a href="http://caniuse.com/#feat=cors"&gt;most browsers&lt;/a&gt; that allows you to specify in a flexible way what kind of cross domain requests are authorized, instead of using some less secured and less powerful hacks like IFrame or JSONP.&lt;/p&gt;&lt;p&gt;The recently released &lt;a href="https://spring.io/blog/2015/05/26/spring-framework-4-2-goes-rc1"&gt;Spring Framework 4.2 RC1&lt;/a&gt; provides &lt;a href="https://jira.spring.io/browse/SPR-9278"&gt;first class support for CORS&lt;/a&gt; out-of-the-box, giving you an easier and more powerful way to configure it than typical &lt;a href="http://software.dzhuvinov.com/cors-filter.html"&gt;filter based&lt;/a&gt; solutions.&lt;/p&gt;&lt;p&gt;Spring MVC provides high-level configuration facilities, described bellow.&lt;/p&gt;&lt;h2&gt;&lt;a href="#controller-method-cors-configuration" class="anchor" name="controller-method-cors-configuration"&gt;&lt;/a&gt;Controller method CORS configuration&lt;/h2&gt;&lt;p&gt;You can add to your &lt;code&gt;@RequestMapping&lt;/code&gt; annotated handler method a &lt;a href="http://docs.spring.io/spring-framework/docs/4.2.x/javadoc-api/org/springframework/web/bind/annotation/CrossOrigin.html"&gt;&lt;code&gt;@CrossOrigin&lt;/code&gt;&lt;/a&gt; annotation in order to enable CORS on it (by default &lt;code&gt;@CrossOrigin&lt;/code&gt; allows all origins and the HTTP methods specified in the &lt;code&gt;@RequestMapping&lt;/code&gt; annotation):&lt;/p&gt;
 &lt;pre&gt;&lt;code class="prettyprint java"&gt;@RestController&#xD;
 @RequestMapping(&amp;quot;/account&amp;quot;)&#xD;
@@ -505,7 +530,7 @@ public class AccountController {&#xD;
 	}&#xD;
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;It is also possible to enable CORS for the whole controller:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint java"&gt;@CrossOrigin(origin = &amp;quot;http://domain2.com&amp;quot;, maxAge = 3600)&#xD;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;@CrossOrigin(origins = &amp;quot;http://domain2.com&amp;quot;, maxAge = 3600)&#xD;
 @RestController&#xD;
 @RequestMapping(&amp;quot;/account&amp;quot;)&#xD;
 public class AccountController {&#xD;
@@ -526,7 +551,7 @@ public class AccountController {&#xD;
 @RequestMapping(&amp;quot;/account&amp;quot;)&#xD;
 public class AccountController {&#xD;
 &#xD;
-	@CrossOrigin(origin = &amp;quot;http://domain2.com&amp;quot;)&#xD;
+	@CrossOrigin(origins = &amp;quot;http://domain2.com&amp;quot;)&#xD;
 	@RequestMapping(&amp;quot;/{id}&amp;quot;)&#xD;
 	public Account retrieve(@PathVariable Long id) {&#xD;
 		// ...&#xD;
@@ -585,7 +610,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {&#xD;
   &lt;li&gt;&lt;a href="http://docs.spring.io/spring/docs/4.2.x/javadoc-api/org/springframework/web/servlet/handler/AbstractHandlerMapping.html#setCorsConfiguration-java.util.Map-"&gt;&lt;code&gt;AbstractHandlerMapping#setCorsConfiguration()&lt;/code&gt;&lt;/a&gt; allows to specify a &lt;code&gt;Map&lt;/code&gt; with several &lt;a href="http://docs.spring.io/spring/docs/4.2.x/javadoc-api/org/springframework/web/cors/CorsConfiguration.html"&gt;CorsConfiguration&lt;/a&gt; mapped on path patterns like &lt;code&gt;/api/**&lt;/code&gt;&lt;/li&gt;
   &lt;li&gt;Subclasses can provide their own &lt;code&gt;CorsConfiguration&lt;/code&gt; by overriding &lt;code&gt;AbstractHandlerMapping#getCorsConfiguration(Object, HttpServletRequest)&lt;/code&gt; method&lt;/li&gt;
   &lt;li&gt;Handlers can implement &lt;a href="http://docs.spring.io/spring/docs/4.2.x/javadoc-api/org/springframework/web/cors/CorsConfigurationSource.html"&gt;&lt;code&gt;CorsConfigurationSource&lt;/code&gt;&lt;/a&gt; interface (like &lt;a href="https://github.com/spring-projects/spring-framework/blob/master/spring-webmvc/src/main/java/org/springframework/web/servlet/resource/ResourceHttpRequestHandler.java"&gt;&lt;code&gt;ResourceHttpRequestHandler&lt;/code&gt;&lt;/a&gt; now does) in order to provide a &lt;a href="http://docs.spring.io/spring/docs/4.2.x/javadoc-api/org/springframework/web/cors/CorsConfiguration.html"&gt;CorsConfiguration&lt;/a&gt; for each request.&lt;/li&gt;
-&lt;/ul&gt;&lt;h2&gt;&lt;a href="#spring-boot-integration" class="anchor" name="spring-boot-integration"&gt;&lt;/a&gt;Spring Boot integration&lt;/h2&gt;&lt;p&gt;CORS support will be available in the upcoming Spring Boot 1.3 release, and is already available in the 1.3.0.BUILD-SNAPSHOT builds.&lt;/p&gt;&lt;p&gt;If fine grained CORS configuration is already a perfect fit for Spring Boot applications, a more &amp;ldquo;Bootiful&amp;rdquo; way to configure global CORS configuration (based on &lt;a href="http://docs.spring.io/spring/docs/4.2.x/javadoc-api/org/springframework/web/cors/CorsConfiguration.html"&gt;CorsConfiguration&lt;/a&gt; bean declaration and dedicated Spring Boot properties) is likely to be provided with Spring Boot 1.3. See &lt;a href="https://github.com/spring-projects/spring-boot/issues/3052#issuecomment-106235392"&gt;this issue&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;As usual, feedbacks are welcome!&lt;/p&gt;</content>
+&lt;/ul&gt;&lt;h2&gt;&lt;a href="#spring-boot-integration" class="anchor" name="spring-boot-integration"&gt;&lt;/a&gt;Spring Boot integration&lt;/h2&gt;&lt;p&gt;CORS support will be available in the upcoming Spring Boot 1.3 release, and is already available in the 1.3.0.BUILD-SNAPSHOT builds.&lt;/p&gt;&lt;p&gt;If fine grained CORS configuration is already a perfect fit for Spring Boot applications, a more &amp;ldquo;Bootiful&amp;rdquo; way to configure global CORS configuration (based on &lt;a href="http://docs.spring.io/spring/docs/4.2.x/javadoc-api/org/springframework/web/cors/CorsConfiguration.html"&gt;CorsConfiguration&lt;/a&gt; or &lt;a href="http://docs.spring.io/spring-framework/docs/4.2.0.BUILD-SNAPSHOT/javadoc-api/org/springframework/web/servlet/config/annotation/CorsRegistry.html"&gt;CorsRegistry&lt;/a&gt; bean declaration) is likely to be provided with Spring Boot 1.3. See &lt;a href="https://github.com/spring-projects/spring-boot/issues/3052#issuecomment-106235392"&gt;this issue&lt;/a&gt; for more details.&lt;/p&gt;&lt;p&gt;As usual, feedbacks are welcome!&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Happy second birthday, Java EE 7! How is it going in production?</title>
@@ -715,34 +740,5 @@ drwxrwxrwx   - spring-xd hdfs          0 2015-06-01 07:29 /xd/hdfstest&#xD;
     <id>tag:spring.io,2015-06-02:2151</id>
     <updated>2015-06-02T21:25:30Z</updated>
     <content type="html">&lt;p&gt;As Josh mentioned in &amp;ldquo;This Week in Spring&amp;rdquo; already, Eugen Paraschiv recently did a noteworthy survey on the adoption of Spring 4 and Java 8 as well as Spring Boot:&lt;br/&gt;&lt;a href="http://www.baeldung.com/java-8-spring-4-and-spring-boot-adoption"&gt;http://www.baeldung.com/java-8-spring-4-and-spring-boot-adoption&lt;/a&gt;&lt;/p&gt;&lt;p&gt;Those are interesting numbers for us. Within the Spring universe, Java 8 adoption seems to be approaching 40%! And in terms of Spring Framework versions, Spring 4 is at 65% already, which I&amp;rsquo;m really happy to see. Even taking into account that a large part of the corporate use of Spring might not be represented in those numbers, that&amp;rsquo;s a great trend. And Pivotal&amp;rsquo;s early production support for Spring 4 on JDK 8 certainly helped in the corporate world as well.&lt;/p&gt;&lt;p&gt;It&amp;rsquo;s equally great to see that a third of the responders are using Spring Boot in the meantime. In other words, half of the Spring 4 userbase is also using Spring Boot, which is impressive for such a young project. Spring Boot&amp;rsquo;s immediate inclusion in our Spring I/O Platform with full production support last year might have boosted its adoption quite a bit. But even more importantly, it simply seems to be a fit for today&amp;rsquo;s application development challenges&amp;hellip;&lt;/p&gt;</content>
-  </entry>
-  <entry>
-    <title>This Week in Spring  - June 2, 2015</title>
-    <link rel="alternate" href="https://spring.io/blog/2015/06/02/this-week-in-spring-june-2-2015" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2015-06-02:2148</id>
-    <updated>2015-06-02T17:33:22Z</updated>
-    <content type="html">&lt;p&gt;Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;! This week I&amp;rsquo;m in New York City in advance of QCon NYC next week talking to customers and working with the local Pivotal Labs team. If you&amp;rsquo;re around &lt;a href="mailto:jlong@pivotal.io"&gt;be sure to say hi&lt;/a&gt; and let&amp;rsquo;s talk code. &lt;/p&gt;&lt;p&gt;So, as usual, we&amp;rsquo;ve got a lot to cover so let&amp;rsquo;s get to it. &lt;/p&gt;
-&lt;ol&gt;
-  &lt;li&gt;Our pal Nicolas Frankel&amp;rsquo;s put together an awesome post on &lt;a href="http://blog.frankel.ch/spring-configuration-modularization-for-integration-testing"&gt;modularizing configuration for integration testing with Spring&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;ul&gt;
-  &lt;li&gt;Spring Cloud co-lead Spencer Gibb just announced &lt;a href="https://spring.io/blog/2015/05/27/spring-cloud-consul-1-0-0-m1-available-now"&gt;that Spring Cloud Consul 1.0.0.M1 is now available&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Don&amp;rsquo;t miss Jamie O’Meara&amp;rsquo;s upcoming webinar on &lt;a href="https://spring.io/blog/2015/05/28/webinar-ci-on-the-cloud-with-jenkins-spring-and-cloud-foundry"&gt;continuous integration with Jenkins, Spring and Cloud Foundry&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Check out Phil Dutson&amp;rsquo;s &lt;a href="https://spring.io/blog/2015/05/28/webinar-jstl-to-thymeleaf-transitioning-your-template"&gt;upcoming webinar on moving &lt;code&gt;.jsp&lt;/code&gt; and JSTL pages to Thymeleaf&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Spring Integration lead Gary Russell &lt;a href="https://spring.io/blog/2015/05/28/spring-integration-4-2-milestone-1-is-available"&gt;just announced Spring Integration 4.2M1 is now available&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;check out the replay of Marten Deinum&amp;rsquo;s &lt;em&gt;awesome&lt;/em&gt; talk that looks &lt;a href="https://spring.io/blog/2015/05/28/webinar-replay-improving-your-legacy-application-with-spring"&gt;at how to modernize legacy applications with Spring &lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Janne Valkealahti just announced that &lt;a href="https://spring.io/blog/2015/06/02/spring-statemachine-1-0-0-m2-released"&gt;Spring Statemachine 1.0.0.M2 has been released&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;our pal Eugen Paraschiv did an interesting &lt;a href="http://www.baeldung.com/java-8-spring-4-and-spring-boot-adoption"&gt;survey on Spring and Java 8&amp;rsquo;s latest adoption numbers &lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;our pal Rafal Borowiec did a great post on &lt;a href="http://www.javacodegeeks.com/2015/05/groovier-spring-boot-integration-testing.html"&gt;using the amazing Groovy language to simplify Integration testing&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Yoichi Kikuchi put together a Japanese-language look at &lt;a href="http://yo1000.hateblo.jp/entry/2015/05/27/120647"&gt;using Spring Boot and MyBatis &lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Kazuhira put together a Japanese-language post on using &lt;a href="http://d.hatena.ne.jp/Kazuhira/20150530/1432996038"&gt;Hibernate, the Spring Cache abstraction, and RedHat&amp;rsquo;s Infinispan&lt;/a&gt; distributed data grid together&lt;/li&gt;
-  &lt;li&gt;The JavaTechPoint blog has a &lt;em&gt;super&lt;/em&gt; simple &lt;a href="http://www.javatechpoint.com/spring-mvc/hello-world-spring-mvc-4-with-spring-boot-framework/"&gt;look at using Spring Boot&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Christoph Deppisch put together a nice post on &lt;a href="https://www.voxxed.com/blog/2015/05/apache-camel-integration-testing-part-2/"&gt;testing Apache Camel solutions with Spring&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Arvind Rai put together a nice look &lt;a href="http://www.concretepage.com/spring-4/spring-4-quartz-2-scheduler-integration-annotation-example-using-javaconfig"&gt;at using Spring Quartz 2 support with Java configuration&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content>
   </entry>
 </feed>
