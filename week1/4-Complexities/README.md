@@ -1,4 +1,4 @@
-# Stack
+# Complexities
 
 Write down the asymptotic complexities of the following functions:
 
@@ -68,10 +68,14 @@ Complexity: ...
 ```
 for (i = 0; i < n; i++) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   for (j = 1; j < n; j*=2) {
 =======
   for (j = 0; j < n; j*=2) {
 >>>>>>> 3cb0a393c96839cc4ca388416c0a957884ae7d95
+=======
+  for (j = 1; j < n; j*=2) {
+>>>>>>> 9199395fd47921ce3e77e9728b69441958d866ac
     count++
   }
 }
