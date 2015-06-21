@@ -33,12 +33,10 @@
 <fullyQualifiedTypeName name="task3.solutions.Contact"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="task3.solutions.PhoneBook"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.Collection"/>
 <fullyQualifiedTypeName name="java.util.Comparator"/>
 <fullyQualifiedTypeName name="task4.solutions.Contact"/>
 <fullyQualifiedTypeName name="java.lang.StringBuffer"/>
-<fullyQualifiedTypeName name="task0.solutions.BinaryHeap"/>
 <fullyQualifiedTypeName name="task5.solutions.HeapSort"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
 <fullyQualifiedTypeName name="task0.solutions.BinarySearch"/>
@@ -46,4 +44,7 @@
 <fullyQualifiedTypeName name="task3.solutions.Quadruplets"/>
 <fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="task4.solution.QuickSort"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="task0.solutions.BinaryHeap"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,24 @@
+package task0;
+
+public class Heap {
+	private static final int SIZE = 10000;
+	private int[] data;
+	private int max;
+	
+	public Heap() {
+		this.data = new int[SIZE];
+		this.max = 0;
+	}
+	
+	public void insert(int element) {
+		
+	}
+	
+	public int remove() {
+		
+	}
+	
+	public int getMax() {
+		return max;
+	}
+}

@@ -1,0 +1,22 @@
+package task0;
+
+public class BinaryHeap {
+	private static final int SIZE = 10000;
+	private int[] data;
+	
+	public BinaryHeap() {
+		this.data = new int[SIZE];
+	}
+	
+	public void insert(int element) {
+		
+	}
+	
+	public int removeMax() {
+		return 0;
+	}
+	
+	public int getMax() {
+		return data[1];
+	}
+}
