@@ -28,8 +28,8 @@ public class KthMinTest {
 	@Test
 	public void test() {
 		assertEquals(1, KMin.kthMinimum(list, 1));
-		assertEquals(3, KMin.kthMinimum(list, 3));
-		assertEquals(6, KMin.kthMinimum(list, 6));
+		assertEquals(2, KMin.kthMinimum(list, 3));
+		assertEquals(5, KMin.kthMinimum(list, 6));
 	}
 
 }

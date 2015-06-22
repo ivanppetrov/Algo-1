@@ -1,26 +1,25 @@
 package task7.solutions;
 
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 import task0.solutions.BinaryHeap;
 
 public class KMin {
 	public static int kthMinimum(List<Integer> list, int k) {
+		//insert always k  elements in heap
 		BinaryHeap heap = new BinaryHeap();
-		Set<Integer> set = new HashSet<Integer>();
 		
-		for (Integer elem : list) {
-			if (set.add(elem)) {
-				heap.insertMin(elem);
+		for (int i = 0; i < k; i++) {
+			heap.insertMax(list.get(i));
+		}
+		
+		for (int i = k ; i < list.size(); i++) {
+			int current = list.get(i);
+			if (heap.getTop() > current) {
+				heap.removeMax();
+				heap.insertMax(current);
 			}
 		}
-		
-		for (int i = 0; i < k - 1; i++) {
-			heap.removeMin();
-		}
-		
 		
 		return heap.getTop();
 	}
