@@ -109,6 +109,10 @@ public class BinaryHeap {
 	public int getTop() {
 		return this.data[1];
 	}
+	
+	public boolean isEmpty() {
+		return index == 0;
+	}
 
 	@Override
 	public String toString() {
