@@ -17,8 +17,6 @@ for the programming languages that we use. Please follow them strictly as
 this would make the process of learning and sharing much easier.
 >>>>>>> 9199395fd47921ce3e77e9728b69441958d866ac
 
-## Code style guides
-
 * [C++ code style guide](http://google.github.io/styleguide/cppguide.html)
 * [Java code style guide](https://google-styleguide.googlecode.com/svn/trunk/javaguide.html)
 * [C# code style guide](https://msdn.microsoft.com/en-us/library/ff926074.aspx)
