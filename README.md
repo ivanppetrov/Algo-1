@@ -1,8 +1,3 @@
-
-# Algorithms
-Solution of the tasks for Algo course at HackBulgaria
-https://github.com/HackBulgaria/Algo-1
-=======
 # Algo-1
 
 The first edition of the algo course in Hack Bulgaria
@@ -99,10 +94,8 @@ The topics that we cover at the Algorithms course.
   * Run-length encoding
   * Burrows-Wheeler transform
   * Knuth-Morris-Pratt
-<<<<<<< HEAD
 * Randomized algorithms - Monte Carlo and Las Vegas (3 lecture)
 * Dynamic programming (3 lecture)
 =======
 * Randomized algorithms - Monte Carlo and Las Vegas
 * Dynamic programming
->>>>>>> da1c802a59c6bab9a30eb0db193f8de310a11bb6
