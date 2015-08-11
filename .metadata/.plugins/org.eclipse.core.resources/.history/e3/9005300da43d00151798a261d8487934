@@ -1,0 +1,22 @@
+package task0.tests;
+
+import static org.junit.Assert.*;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+public class BinaryHeapTests {
+	static int size;
+	static int[] testArray;
+	@BeforeClass
+	public static void setUpBeforeClass() throws Exception {
+		size = 2000;
+		testArray = TestGenerator.generateTestArray(size);
+	}
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}
