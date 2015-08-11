@@ -13,12 +13,12 @@ public class ValidDirectoriesTests {
 	
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		directories = new int[][]{{0, 1, 0, 1, 0, 0},
+		directories = new int[][]{{0, 1, 0, 1, 0, 2},
 								{0, 0, 2, 0, 0, 0},
 								{0, 0, 0, 0, 0, 0},
-								{0, 0, 0, 0, 2, 1},
+								{1, 0, 0, 0, 2, 0},
 								{0, 0, 0, 0, 0, 0},
-								{0, 0, 0, 0, 0, 1}};
+								{0, 0, 0, 0, 0, 0}};
 		
 		int length = directories[0].length;
 		

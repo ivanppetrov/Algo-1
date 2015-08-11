@@ -9,7 +9,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import task2.solutions.BirthadyRanges;
-import task2.solutions.Pair;
+import task2.solutions.BirthadyRanges.Pair;
 
 public class BdayRangesTests {
 	static List<Integer> birthdaysList;

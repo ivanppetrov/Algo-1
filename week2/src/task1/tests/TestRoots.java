@@ -2,6 +2,10 @@ package task1.tests;
 
 import static org.junit.Assert.*;
 
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.util.Scanner;
+
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -15,7 +19,12 @@ public class TestRoots {
 
 	@Test
 	public void test() {
-		System.out.println(Roots.squareRoot(25));
+		Scanner sc = new Scanner(System.in);
+		int number = sc.nextInt();
+		NumberFormat formatter = new DecimalFormat("#0.00000");
+		System.out.println(formatter.format(Roots.squareRoot(number)));
 	}
-
+public static void main(String[] args) {
+	
+}
 }

@@ -8,8 +8,8 @@ import java.util.List;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import task4.solutions.Contact;
 import task4.solutions.PhoneBook;
+import task4.solutions.PhoneBook.Contact;
 
 public class ContactTests {
 	static List<Contact> phoneBook;
@@ -24,7 +24,7 @@ public class ContactTests {
 		
 		int number= 0;
 		for (int i = 0; i < 10; i++) {
-			contact = new Contact(String.valueOf(i), i);
+			contact = new Contact(i, String.valueOf(i));
 			phoneBook.add(contact);
 			
 			numbers.add(number+=2);

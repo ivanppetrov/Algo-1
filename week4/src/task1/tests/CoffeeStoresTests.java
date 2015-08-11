@@ -8,12 +8,12 @@ import org.junit.Test;
 import task1.solutions.ClosestCoffeeStore;
 
 public class CoffeeStoresTests {
-	static int[][] graph;
+	static byte[][] graph;
 	static byte[] coffeStore;
 	static int startingPoint;
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
-		graph = new int[][]{{0, 1, 0, 1, 0, 0},
+		graph = new byte[][]{{0, 1, 0, 1, 0, 0},
 							{1, 0, 1, 0, 0, 0},
 							{0, 1, 0, 0, 1, 0},
 							{1, 0, 0, 0, 0, 0},
