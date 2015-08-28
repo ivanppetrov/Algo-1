@@ -1,4 +1,4 @@
-package task4.tests;
+package task5.tests;
 
 import static org.junit.Assert.*;
 
@@ -7,11 +7,11 @@ import java.util.Random;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import task4.solution.CountingSort;
-import task4.solution.InsertionSort;
-import task4.solution.MergeSort;
-import task4.solution.QuickSort;
-import task4.solution.SelectionSort;
+import task5.solution.CountingSort;
+import task5.solution.InsertionSort;
+import task5.solution.MergeSort;
+import task5.solution.QuickSort;
+import task5.solution.SelectionSort;
 
 public class SortingTests {
 	public static final int SIZE = 100000;

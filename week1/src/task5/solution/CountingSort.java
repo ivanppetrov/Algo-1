@@ -1,4 +1,4 @@
-package task4.solution;
+package task5.solution;
 
 public class CountingSort {
 	public static int[] sort(int[] array, int maxValue) {

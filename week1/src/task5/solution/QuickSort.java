@@ -1,4 +1,4 @@
-package task4.solution;
+package task5.solution;
 
 public class QuickSort {
 	public static void sort(int[] array){
