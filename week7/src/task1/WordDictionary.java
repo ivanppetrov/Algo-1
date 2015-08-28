@@ -8,9 +8,7 @@ import java.io.PrintWriter;
 import java.util.StringTokenizer;
 
 public class WordDictionary {
-	private static final int A = 'a';
-	private static final int ZERO = '0';
-	private static final int SIZE = 36;
+	private static final int SIZE = 128;
 	private static final String INSERT = "insert";
 	public static PrintWriter out = new PrintWriter(new BufferedOutputStream(System.out));
 
@@ -85,10 +83,7 @@ public class WordDictionary {
 		current = root;
 		
 		while (i < len) {
-			int ch = word.charAt(i) -  A;
-			if (ch < 0) {
-				ch = word.charAt(i) - ZERO + 26;
-			}
+			int ch = word.charAt(i);
 			
 			if (current.next[ch] == null) {
 				current.next[ch] = new Node(ch, false, new Node[SIZE]);
@@ -107,10 +102,7 @@ public class WordDictionary {
 		current = root;
 		
 		while (i < len) {
-			int ch = word.charAt(i) -  A;
-			if (ch < 0) {
-				ch = word.charAt(i) - ZERO + 26;
-			}
+			int ch = word.charAt(i);
 			
 			if (current.next[ch] != null) {
 				current = current.next[ch];
