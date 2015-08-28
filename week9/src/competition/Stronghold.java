@@ -170,19 +170,16 @@ public class Stronghold {
 			if (node == null) {
 				return null;
 			}
+			
 			Wall currentValue = node.getValue();
-			if (isLeaf(node) && currentValue.height != element.height) {
-				return null;
-			} else {
-				if (currentValue.height > element.height) {
-					return node;
-				} else if (element.height < currentValue.height){
-					node = lookUp(node.getLeft(), element);
-				} else {
-					node = lookUp(node.getRight(), element);
-				}
+			if (currentValue.height > element.height) {
 				return node;
+			} else {
+				node = lookUp(node.getRight(), element);
 			}
+			
+			return node;
+			
 		}
 		
 		public void remove(Wall element) {
@@ -192,7 +189,7 @@ public class Stronghold {
 		private Node remove(Node node, Wall element) {
 			if (node == null) {
 				return node;
-			} else if (element.index < node.getValue().height) {
+			} else if (element.height < node.getValue().height) {
 				node.setLeft(remove(node.getLeft(), element));
 			} else if (element.height > node.getValue().height) {
 				node.setRight(remove(node.getRight(), element));
@@ -212,57 +209,6 @@ public class Stronghold {
 			
 			return node;
 		}
-		
-		private Node delete(Node node, Wall key) {
-			  if (node == null) {
-			   return null;
-			  }
-
-			  if (key.height < node.getValue().height) {
-			   node.left = delete(node.left, key);
-
-			  } else if (key.height > node.getValue().height) {
-			   node.right = delete(node.right, key);
-			  } else {
-			   // zero or one child
-			   if (node.right == null) {
-			    return node.left;
-			   }
-
-			   // zero or one child
-			   if (node.left == null) {
-			    return node.right;
-			   }
-
-			   // left and right child
-			   // get leftmost child from the right subtree and swap values
-			   // recursively do the same for the leftmost children
-			   Node temp = node;
-			   node = getMinElement(temp.right);
-			   node.right = deleteMinElement(temp.right);
-			   node.left = temp.left;
-			  }
-
-			  return node;
-			 }
-		
-		private Node deleteMinElement(Node x) {
-			   if (x.left == null) {
-			    return x.right;
-			   }
-
-			   x.left = deleteMinElement(x.left);
-
-			   return x;
-			  }
-		public Node getMinElement(Node node) {
-			   if (node.left == null) {
-			    return node;
-
-			   } else {
-			    return getMinElement(node.left);
-			   }
-			  }
 		
 		private Node findMin(Node node) {
 			if (node == null) {
@@ -301,9 +247,12 @@ public class Stronghold {
 		
 		int size = sc.nextInt();
 		BinarySearchTree tree = new BinarySearchTree();
+		int[] array = new int[size];
 		
 		for (int i = 0; i < size; i++) {
-			tree.insert(new Wall(sc.nextInt(), i + 1));
+			int value = sc.nextInt();
+			array[i] = value;
+			tree.insert(new Wall(value, i + 1));
 		}
 		
 		int len = sc.nextInt();
@@ -312,9 +261,13 @@ public class Stronghold {
 			String[] commands = sc.nextLine().split("\\s+");
 			
 			if (commands[0].equals("shoot")) {
-				Wall wall = tree.lookUp(new Wall(Integer.parseInt(commands[1]), 0)).getValue();
-				out.println(wall != null ? wall.index : "MISS");
-				tree.remove(wall);
+				Node node = tree.lookUp(new Wall(Integer.parseInt(commands[1]), Integer.MAX_VALUE));
+				if (node != null) {
+					out.println(node.getValue().index);
+					tree.remove(node.getValue());
+				} else {
+					out.println("MISS");
+				}
 			} else {
 				int index = Integer.parseInt(commands[1]); 
 				int height = Integer.parseInt(commands[2]);

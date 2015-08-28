@@ -90,7 +90,6 @@ public class Change {
 		int sum = sc.nextInt();
 		
 		out.println(getNumberOfSum(sum));
-		out.print(getNumberOfSumUnique(sum));
 		out.flush();
 		out.close();
 	}

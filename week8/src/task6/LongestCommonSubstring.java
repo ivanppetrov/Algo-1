@@ -60,27 +60,27 @@ public class LongestCommonSubstring {
 		int[][] result = new int[len1][len2];
 		int max = 0;
 		int index = 0;
-		int index2 = 0;
 		
 		for (int i = 0; i < len1; i++) {
 			for (int j = 0; j < len2; j++) {
-				if (i > -1 && j > -1) {
-					if (str1Arr[i] == str2Arr[j]) {
-						int value = result[i - 1][j - 1] + 1;
-						result[i][j] = value;
-						if (max < value) {
-							max = value;
-							index = i;
-							index2 = j;
-						}
-					} else {
-						result[i][j] = 0;
+				if (str1Arr[i] == str2Arr[j]) {
+					int value = 1;
+					if (i > 0 && j > 0) {
+						value = result[i - 1][j - 1] + 1;
 					}
+					result[i][j] = value;
+					if (max < value) {
+						max = value;
+						index = i;
+					}
+				} else {
+					result[i][j] = 0;
 				}
+				
 			}
 		}
 		
-		return str1.substring(index - max + 1, index + 1) + "\n" + str2.substring(index2 - max + 1, index2 + 1);
+		return str1.substring(index - max + 1, index + 1);
 	}
 	
 	public static void main(String[] args) {

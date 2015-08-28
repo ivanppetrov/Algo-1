@@ -67,14 +67,38 @@ public class RMQ {
 		}
 	}
 	
-	public static int getMin(int start, int end) {
-		if (end == size) {
-			return biTree[1];
-		} else {
-			
-		}
-		return end;
+	public static int getMin(int left, int right) {
+		int lMin = biTree[left];
+		int rMin = biTree[right];
 		
+		while (left < right) {
+			if (right - left == 1) {
+				break;
+			}
+			
+			//if left is left child
+			if (left % 2 == 0) {
+				//left == left parent
+				left /= 2;
+				lMin = Math.min(lMin, biTree[left]);
+			} else {	//if left pointer is right child
+				int temp = Math.min(lMin, biTree[left]);
+				left = (left + 1) /2;
+				lMin = Math.min(temp, biTree[left]);
+			}
+			
+			//if right is left child
+			if (right % 2 == 0) {
+				int temp = Math.min(rMin, biTree[right]);
+				right = (right - 1) /2;
+                rMin = Math.min(temp, biTree[right]);
+			} else {	//if right is right child
+				right /= 2;
+				rMin = Math.min(rMin, biTree[right]);
+			}
+		}
+		
+		return Math.min(lMin, rMin);
 	}
 	
 	public static void main(String[] args) {
@@ -90,30 +114,21 @@ public class RMQ {
 			set(index, sc.nextInt());
 		}
 		
-		for (int i = 0; i < biTree.length; i++) {
-			out.printf("%d ", biTree[i]);
-		}
-		
 		for (int i = 0; i < queries; i++) {
 			String[] command = sc.nextLine().split("\\s+");
 			
 			if (command[0].equals("set")) {
 				int index = Integer.parseInt(command[1]);
 				int value = Integer.parseInt(command[2]);
-				index += size - 1;
+				index += size;
 				set(index, value);
 			} else {
-				int start = Integer.parseInt(command[1]);
-				int end = Integer.parseInt(command[2]);
+				int start = Integer.parseInt(command[1]) + size;
+				int end = Integer.parseInt(command[2]) + size;
 				
 				out.println(getMin(start, end));
 			}
 		}
-		out.println();
-		for (int i = 0; i < biTree.length; i++) {
-			out.printf("%d ", biTree[i]);
-		}
-		
 		out.flush();
 		out.close();
 	}

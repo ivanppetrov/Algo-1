@@ -60,20 +60,26 @@ public class NeedleHaystack {
 	private static void getNeedlePosition(String haystack, String needle) {
 		int needleHash = getHash(needle);
 		int needleLen = needle.length();
-		int tempHash = getHash(haystack.substring(0, needleLen));
+		String temp = haystack.substring(0, needleLen);
+		int tempHash = getHash(temp);
 		int basePow = getBasePow(needleLen);
 		
-		for (int i = 1; i < haystack.length() - needle.length(); i++) {
+		if (needle.equals(temp)) {
+			result.append(0);
+			result.append("\n");
+		}
+		
+		for (int i = 1; i <= haystack.length() - needle.length(); i++) {
 			int ch = haystack.charAt(i - 1) - A + 1;
 			int nextCh = haystack.charAt(i + needleLen - 1) - A + 1;
 			
-			String temp = haystack.substring(i, i + needleLen);
+			temp = haystack.substring(i, i + needleLen);
 			tempHash = (((MOD + tempHash - basePow * ch) % MOD) * BASE  + nextCh) % MOD;
 			
 			if (tempHash == needleHash) {
 				if (needle.equals(temp)) {
 					result.append(i);
-					result.append(",");
+					result.append("\n");
 				}
 			}
 		}
